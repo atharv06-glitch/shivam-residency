@@ -56,7 +56,7 @@ function initLocationFilter() {
       items.forEach(item => {
         const itemGroup = item.getAttribute('data-group');
         if (group === 'all' || itemGroup === group) {
-          item.style.display = 'block';
+          item.style.display = 'flex';
         } else {
           item.style.display = 'none';
         }

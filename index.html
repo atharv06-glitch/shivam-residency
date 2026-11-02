@@ -633,218 +633,331 @@
           </p>
         </div>
 
-        <!-- Location Filter Tabs -->
-        <div class="location-filter-pills reveal" id="locationFilter">
-          <button class="loc-pill-btn active" data-loc="all">All Distances</button>
-          <button class="loc-pill-btn" data-loc="education"><i class="fa-solid fa-graduation-cap"></i> Education</button>
-          <button class="loc-pill-btn" data-loc="convenience"><i class="fa-solid fa-basket-shopping"></i> Everyday Convenience</button>
-          <button class="loc-pill-btn" data-loc="transit"><i class="fa-solid fa-train-subway"></i> Connectivity</button>
-          <button class="loc-pill-btn" data-loc="leisure"><i class="fa-solid fa-tree"></i> Leisure</button>
-          <button class="loc-pill-btn" data-loc="healthcare"><i class="fa-solid fa-hospital"></i> Healthcare</button>
+        <!-- ==========================================
+             PART 1: HORIZONTAL FULL-WIDTH GOOGLE MAP SHOWCASE
+             ========================================== -->
+        <div class="location-map-fullwidth reveal">
+          <div class="map-header-bar">
+            <div class="map-addr-info">
+              <div class="map-addr-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="map-addr-text">
+                <span class="map-addr-tag">Project Site Address</span>
+                <h4>Sr. No. 10 Katraj, Near Padmaja Park Phase 1, Near Lake Town, Bibwewadi Annex, Pune – 411046</h4>
+              </div>
+            </div>
+
+            <div class="map-header-actions">
+              <a href="https://maps.google.com/?q=Lake+Town+Katraj+Pune" target="_blank" rel="noopener" class="btn btn-primary btn-sm" id="btnOpenMaps">
+                <i class="fa-solid fa-location-arrow"></i> Open in Google Maps
+              </a>
+              <a href="#contact" class="btn btn-outline btn-sm" id="btnDirectionsSiteVisit">
+                <i class="fa-regular fa-calendar-check"></i> Book Site Visit
+              </a>
+            </div>
+          </div>
+
+          <!-- Full Width Map Embed Frame -->
+          <div class="map-iframe-container">
+            <iframe 
+              title="Shivam Residency Panoramic Location Map"
+              src="https://maps.google.com/maps?q=Lake+Town,+Katraj,+Pune,+Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="430" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+
+            <!-- Floating Quick Proximity Ribbon over the Map -->
+            <div class="map-floating-ribbon">
+              <div class="ribbon-pill"><i class="fa-solid fa-water"></i> <strong>3 Mins</strong> to Lake Town</div>
+              <div class="ribbon-divider"></div>
+              <div class="ribbon-pill"><i class="fa-solid fa-graduation-cap"></i> <strong>3–5 Mins</strong> to VIT College</div>
+              <div class="ribbon-divider"></div>
+              <div class="ribbon-pill"><i class="fa-solid fa-cart-shopping"></i> <strong>3–5 Mins</strong> to D-Mart</div>
+              <div class="ribbon-divider"></div>
+              <div class="ribbon-pill"><i class="fa-solid fa-train-subway"></i> <strong>10–12 Mins</strong> to Swargate Metro</div>
+            </div>
+          </div>
         </div>
 
-        <div class="location-display-layout">
-          <!-- Travel Time Matrix directly from Brochure Pg 8 -->
-          <div class="location-cards-grid reveal-left" id="locCardsContainer">
+        <!-- ==========================================
+             PART 2: LANDMARKS BELOW THE MAP
+             ========================================== -->
+        <div class="location-landmarks-wrap">
+          <div class="landmarks-section-heading reveal">
+            <div class="sub-lead-pill"><i class="fa-solid fa-compass"></i> Proximity Matrix</div>
+            <h3 class="landmarks-title">Key Landmarks &amp; Travel Times</h3>
+            <p class="landmarks-subtitle">Explore top schools, colleges, daily shopping, transit hubs, and healthcare located minutes away.</p>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="location-filter-pills reveal" id="locationFilter">
+            <button class="loc-pill-btn active" data-loc="all"><i class="fa-solid fa-list-check"></i> All Landmarks</button>
+            <button class="loc-pill-btn" data-loc="education"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+            <button class="loc-pill-btn" data-loc="convenience"><i class="fa-solid fa-basket-shopping"></i> Everyday Convenience</button>
+            <button class="loc-pill-btn" data-loc="transit"><i class="fa-solid fa-train-subway"></i> Transit &amp; Highways</button>
+            <button class="loc-pill-btn" data-loc="leisure"><i class="fa-solid fa-tree"></i> Parks &amp; Leisure</button>
+            <button class="loc-pill-btn" data-loc="healthcare"><i class="fa-solid fa-hospital"></i> Healthcare</button>
+          </div>
+
+          <!-- Comprehensive Responsive Landmark Cards Grid (Below Map) -->
+          <div class="location-landmarks-grid reveal" id="locCardsContainer">
             <!-- Education -->
             <div class="loc-item-card" data-group="education">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 3–5 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill education"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 3–5 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>VIT (Vishwakarma Institute of Technology)</h4>
+                <p>Autonomous Engineering &amp; Research Campus</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="education">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 4–7 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill education"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 4–7 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>City International School / Sarhad School</h4>
+                <p>Reputed CBSE &amp; State Board Schools</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="education">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 6–10 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill education"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 6–10 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Bharati Vidyapeeth Campus, Katraj</h4>
+                <p>Medical, Dental &amp; Engineering University</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="education">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 8–12 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill education"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 8–12 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>PICT (Pune Institute of Computer Technology)</h4>
+                <p>Leading Engineering &amp; Tech Institute</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="education">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill education"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>VIIT Kondhwa / Pushpa International School</h4>
+                <p>Higher Education &amp; Global Academics</p>
               </div>
             </div>
 
             <!-- Everyday Convenience -->
             <div class="loc-item-card" data-group="convenience">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 3–5 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill convenience"><i class="fa-solid fa-basket-shopping"></i> Retail</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 3–5 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>D-Mart (Bibwewadi–Kondhwa Road)</h4>
+                <p>Hypermarket for Daily Grocery &amp; Household Needs</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="convenience">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 6–8 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill convenience"><i class="fa-solid fa-basket-shopping"></i> Retail</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 6–8 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Reliance Smart Superstore (Satara Road)</h4>
+                <p>Comprehensive Supermarket &amp; Retail Shopping</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="convenience">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 8–10 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill convenience"><i class="fa-solid fa-basket-shopping"></i> Retail</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 8–10 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Market Yard Supermarkets & Wholesale Market</h4>
+                <h4>Market Yard Supermarkets &amp; Wholesale Market</h4>
+                <p>Fresh Farm Produce &amp; Wholesale Shopping Hub</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="convenience">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill convenience"><i class="fa-solid fa-basket-shopping"></i> Shopping</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Kumar Pacific Mall (Shankarshet Road)</h4>
+                <p>Premium Retail, Dining &amp; Cinema Complex</p>
               </div>
             </div>
 
-            <!-- Connectivity -->
+            <!-- Transit & Connectivity -->
             <div class="loc-item-card" data-group="transit">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 1–2 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill transit"><i class="fa-solid fa-bus"></i> Transit</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 1–2 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Local PMT Bus Stop & Auto Stand</h4>
+                <h4>Local PMT Bus Stop &amp; Auto Stand</h4>
+                <p>Instant First &amp; Last-Mile Public Commute</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="transit">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 5–8 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill transit"><i class="fa-solid fa-bus"></i> Transit</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 5–8 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Katraj Bus Depot / Katraj–Kondhwa Road</h4>
+                <p>Major PMT Bus Terminal &amp; Arterial Road</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="transit">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 10–12 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill transit"><i class="fa-solid fa-train-subway"></i> Metro</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 10–12 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Swargate Metro Station & Bus Stand</h4>
+                <h4>Swargate Metro Station &amp; Bus Hub</h4>
+                <p>Fast Multi-Modal Transit across Central Pune</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="transit">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 10–12 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill transit"><i class="fa-solid fa-road"></i> Highway</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 10–12 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Mumbai–Bengaluru Highway (NH48 Bypass)</h4>
+                <p>Seamless Intercity &amp; Hinjewadi IT Park Highway</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="transit">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 25–30 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill transit"><i class="fa-solid fa-train"></i> Railways</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 25–30 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Pune Railway Station</h4>
+                <p>Central Rail Terminal connecting India</p>
               </div>
             </div>
 
-            <!-- Leisure -->
+            <!-- Leisure & Nature -->
             <div class="loc-item-card" data-group="leisure">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 1–3 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill leisure"><i class="fa-solid fa-tree"></i> Leisure</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 1–3 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Lake Town Society Garden / Local Parks</h4>
+                <h4>Lake Town Society Garden &amp; Walking Tracks</h4>
+                <p>Serene Morning Walks &amp; Family Relaxation</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="leisure">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 5–8 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill leisure"><i class="fa-solid fa-water"></i> Lake</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 5–8 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Katraj Lake</h4>
+                <h4>Katraj Lake &amp; Waterfront Promenade</h4>
+                <p>Scenic Lakefront with Island Fountain</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="leisure">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 7–10 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill leisure"><i class="fa-solid fa-film"></i> Cinema</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 7–10 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>City Pride Multiplex (Satara Road)</h4>
+                <p>Multi-Screen Cinema, Food Court &amp; Entertainment</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="leisure">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 8–10 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill leisure"><i class="fa-solid fa-paw"></i> Zoo</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 8–10 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Katraj Snake Park & Rajiv Gandhi Zoological Park</h4>
+                <h4>Rajiv Gandhi Zoological Park &amp; Snake Park</h4>
+                <p>Pune's Renowned 130-Acre Wildlife &amp; Nature Reserve</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="leisure">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill leisure"><i class="fa-solid fa-mountain-sun"></i> Heritage</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Saras Baug & Parvati Hill</h4>
+                <h4>Saras Baug &amp; Historic Parvati Hill</h4>
+                <p>Historic Garden, Ganesh Temple &amp; Panoramic Viewpoint</p>
               </div>
             </div>
 
             <!-- Healthcare -->
             <div class="loc-item-card" data-group="healthcare">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 2–4 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill healthcare"><i class="fa-solid fa-hospital"></i> Hospital</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 2–4 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Chintamani Hospital & Shree J Hospital</h4>
+                <h4>Chintamani Hospital &amp; Shree J Hospital</h4>
+                <p>24x7 Immediate Neighborhood Medical Care</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="healthcare">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 8–12 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill healthcare"><i class="fa-solid fa-hospital"></i> Hospital</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 8–12 mins</span>
+              </div>
               <div class="loc-details">
-                <h4>Bharati Hospital & Research Centre</h4>
+                <h4>Bharati Hospital &amp; Research Centre</h4>
+                <p>800+ Bed Multispecialty Tertiary Healthcare Hub</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="healthcare">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 10–12 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill healthcare"><i class="fa-solid fa-hospital"></i> Hospital</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 10–12 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Rao Nursing Home / Sahyadri Hospital</h4>
+                <p>Trusted Specialized Critical Care &amp; Clinics</p>
               </div>
             </div>
 
             <div class="loc-item-card" data-group="healthcare">
-              <div class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</div>
+              <div class="loc-card-header">
+                <span class="cat-pill healthcare"><i class="fa-solid fa-hospital"></i> Hospital</span>
+                <span class="time-badge"><i class="fa-solid fa-clock"></i> 12–15 mins</span>
+              </div>
               <div class="loc-details">
                 <h4>Inamdar Multispecialty Hospital</h4>
-              </div>
-            </div>
-          </div>
-
-          <!-- Interactive Google Maps / Address Card -->
-          <div class="location-map-pane reveal-right">
-            <div class="map-card-box">
-              <div class="address-header">
-                <div class="addr-icon"><i class="fa-solid fa-map-pin"></i></div>
-                <div>
-                  <h4>Project Site Address</h4>
-                  <p>Sr. No. 10 Katraj, Near Padmaja Park Phase 1, Near Lake Town, Pune – 411046</p>
-                </div>
-              </div>
-
-              <!-- Standard Reliable Google Map Embed -->
-              <div class="map-embed-wrapper">
-                <iframe 
-                  title="Shivam Residency Location Map"
-                  src="https://maps.google.com/maps?q=Lake+Town,+Katraj,+Pune,+Maharashtra&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                  width="100%" 
-                  height="320" 
-                  style="border:0; border-radius: 12px;" 
-                  allowfullscreen="" 
-                  loading="lazy">
-                </iframe>
-              </div>
-
-              <div class="site-visit-prompt">
-                <div class="prompt-text">
-                  <strong>Need driving directions or site assistance?</strong>
-                  <span>Our sales desk is available to assist you.</span>
-                </div>
-                <a href="https://maps.google.com/?q=Lake+Town+Katraj+Pune" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-                  <i class="fa-solid fa-location-arrow"></i> Open in Maps
-                </a>
+                <p>Advanced Super-Specialty Medical Facilities</p>
               </div>
             </div>
           </div>
@@ -852,7 +965,7 @@
 
         <div class="location-closer-banner reveal">
           <i class="fa-solid fa-location-dot"></i>
-          <span>Everything you need. Closer to home.</span>
+          <span>Everything you need. Closer to home &bull; Near Lake Town, Bibwewadi Annex, Pune.</span>
         </div>
       </div>
     </section>
