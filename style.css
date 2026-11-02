@@ -1693,50 +1693,6 @@ button {
   display: block;
 }
 
-/* Floating Quick Proximity Ribbon over the Map */
-.map-floating-ribbon {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: rgba(15, 23, 42, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  padding: 10px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 14px;
-  color: #FFFFFF;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  z-index: 2;
-  flex-wrap: wrap;
-}
-
-.ribbon-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: #E2E8F0;
-}
-
-.ribbon-pill i {
-  color: #FBBF24;
-}
-
-.ribbon-pill strong {
-  color: #FFFFFF;
-}
-
-.ribbon-divider {
-  width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.22);
-}
-
 /* Landmarks Section Below Map */
 .location-landmarks-wrap {
   width: 100%;
@@ -2838,19 +2794,6 @@ button {
 
   .map-iframe-container iframe {
     height: 320px;
-  }
-
-  .map-floating-ribbon {
-    position: static;
-    margin-top: 12px;
-    border-radius: var(--radius-md);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .ribbon-divider {
-    display: none;
   }
 
   .location-landmarks-grid {
