@@ -1,4 +1,5 @@
 *.zip
+!shivam-residency-images.zip
 *.log
 node_modules/
 .DS_Store
